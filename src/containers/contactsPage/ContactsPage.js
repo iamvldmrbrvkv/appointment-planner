@@ -36,7 +36,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
   contacts array variable in props
   */
   useEffect(() => {
-    contacts.map(contact => {
+    contacts.forEach(contact => {
       if (contact.name === name) {
         setDuplicate(true);
       }
