@@ -39,6 +39,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
     contacts.forEach(contact => {
       if (contact.name === name) {
         setDuplicate(true);
+        alert('The name is a duplicate');
       }
     })
   });
