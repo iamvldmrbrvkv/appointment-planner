@@ -12,7 +12,7 @@ export const ContactForm = ({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name: </label>
+        <label htmlFor="name">Name:</label>
         <input
           id="name"
           name="name"
@@ -21,7 +21,7 @@ export const ContactForm = ({
           onChange={e => setName(e.target.value)}
         />
         <br />
-        <label htmlFor="phone">Phone: </label>
+        <label htmlFor="phone">Phone:</label>
         <input
           id="phone"
           name="phone"
@@ -31,7 +31,7 @@ export const ContactForm = ({
           pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
         />
         <br />
-        <label htmlFor="email">Email: </label>
+        <label htmlFor="email">Email:</label>
         <input
           id="email"
           name="email"
