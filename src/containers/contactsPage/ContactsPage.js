@@ -46,11 +46,13 @@ export const ContactsPage = ({ contacts, addContact }) => {
   return (
     <div>
       <section>
-        <h2>Add Contact</h2> 
+        <h2>Add Contact</h2>
+        <ContactForm name={name} phone={phone} email={email} handleSubmit={handleSubmit} />
       </section>
       <hr />
       <section>
         <h2>Contacts</h2>
+        <TileList contacts={contacts} />
       </section>
     </div>
   );
