@@ -38,18 +38,19 @@ export const ContactsPage = ({ contacts, addContact }) => {
   contacts array variable in props
   */
   useEffect(() => {
-    contacts.forEach(contact => {
-      if (contact.name === name) {
-        setDuplicate(true);
-      }
-    })
-  });
+    const checkDuplicate = contacts.some(contact => contact.name === name);
+    if (checkDuplicate) {
+      setDuplicate(true);
+    } else if (duplicate) {
+      setDuplicate(false);
+    }
+  }, [contacts, duplicate, name]);
   
   return (
     <div>
       <section>
         <h2>Add Contact</h2>
-        <ContactForm name={name} phone={phone} email={email} handleSubmit={handleSubmit} />
+        <ContactForm name={name} setName={setName} phone={phone} setPhone={setPhone} email={email} setEmail={setEmail} handleSubmit={handleSubmit} />
       </section>
       <hr />
       <section>
