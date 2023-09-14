@@ -28,7 +28,7 @@ export const ContactForm = ({
           type="tel"
           value={phone}
           onChange={e => setPhone(e.target.value)}
-          pattern="^\+7|7|8?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+          pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
         />
         <br />
         <label htmlFor="email">Email:</label>
