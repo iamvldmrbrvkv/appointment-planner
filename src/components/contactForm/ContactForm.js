@@ -19,6 +19,8 @@ export const ContactForm = ({
           type="text"
           value={name}
           onChange={e => setName(e.target.value)}
+          required
+          placeholder="Contact Name"
         />
         <br />
         <label htmlFor="phone">Phone:</label>
@@ -29,6 +31,8 @@ export const ContactForm = ({
           value={phone}
           onChange={e => setPhone(e.target.value)}
           pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+          required
+          placeholder="Contact Phone (#-###-###-##-##)"
         />
         <br />
         <label htmlFor="email">Email:</label>
@@ -38,11 +42,13 @@ export const ContactForm = ({
           type="email"
           value={email}
           onChange={e => setEmail(e.target.value)}
+          required
+          placeholder="Contact Email"
         />
         <br />
         <input
           type="submit"
-          value="Submit"
+          value="Add Contact"
         />
       </form>
     </>
