@@ -12,39 +12,39 @@ export const ContactForm = ({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          required
-          placeholder="Contact Name"
-        />
+        <label>
+          <input
+            name="name"
+            type="text"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            required
+            placeholder="Contact Name"
+          />
+        </label>
         <br />
-        <label htmlFor="phone">Phone:</label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          value={phone}
-          onChange={e => setPhone(e.target.value)}
-          pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-          required
-          placeholder="Contact Phone (#-###-###-##-##)"
-        />
+        <label>
+          <input
+            name="phone"
+            type="tel"
+            value={phone}
+            onChange={e => setPhone(e.target.value)}
+            pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+            required
+            placeholder="Contact Phone (#-###-###-##-##)"
+          />
+        </label>
         <br />
-        <label htmlFor="email">Email:</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
-          placeholder="Contact Email"
-        />
+        <label>
+          <input
+            name="email"
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+            placeholder="Contact Email"
+          />
+        </label>
         <br />
         <input
           type="submit"

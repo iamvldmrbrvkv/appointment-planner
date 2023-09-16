@@ -10,8 +10,8 @@ const getTodayString = () => {
 
 export const AppointmentForm = ({
   contacts,
-  name,
-  setName,
+  title,
+  setTitle,
   contact,
   setContact,
   date,
@@ -24,38 +24,46 @@ export const AppointmentForm = ({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          required
-          placeholder="Appointment Name"
-        />
+        <label>
+          <input
+            name="name"
+            type="text"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
+            required
+            placeholder="Appointment Name"
+          />
+        </label>
         <br />
-        <ContactPicker contact={contact} setContact={setContact} />
-        <label htmlFor="date">Date:</label>
-        <input
-          id="date"
-          name="date"
-          type="date"
-          value={date}
-          onChange={e => setDate(e.target.value)}
-          min={getTodayString()}
-          required
-        />
+        <label>
+          <ContactPicker
+            name="contact"
+            value={contact}
+            onChange={e => setContact(e.target.value)}
+            contacts={contacts}
+          />
+        </label>
         <br />
-        <label htmlFor="time">Time:</label>
-        <input
-          id="time"
-          name="time"
-          type="time"
-          value={time}
-          onChange={e => setTime(e.target.value)}
-          required
-        />
+        <label>
+          <input
+            name="date"
+            type="date"
+            value={date}
+            onChange={e => setDate(e.target.value)}
+            min={getTodayString()}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          <input
+            name="time"
+            type="time"
+            value={time}
+            onChange={e => setTime(e.target.value)}
+            required
+          />
+        </label>
         <br />
         <input
           type="submit"
